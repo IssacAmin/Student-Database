@@ -79,10 +79,11 @@ void SDB_action(uint8 choice, student DB[])
 				else
 					printf("Database is not full\n");
 				break;
-			case 8:
-				printf("Thank you... Good Bye");
+			case 0:
+				printf("Thank you... Good Bye\n");
 				break;
 			default:
+				printf("Choice is invalid... Try Again\n");
 				break;
 			}
 }
