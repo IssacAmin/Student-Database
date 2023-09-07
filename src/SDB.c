@@ -145,8 +145,10 @@ void SDB_GetList (uint8 * count, uint32 * list, student DB[]){
 		for(int i = 0; i < 10; i++)
 		{
 			if((DB[i].Student_ID) != 0 || (DB[i].Student_year) != 0)
+			{
 				list[index] = DB[i].Student_ID;
 				index++;
+			}
 		}
 }
 
