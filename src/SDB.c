@@ -141,11 +141,13 @@ bool SDB_ReadEntry (uint32 id, student DB[]){
 }
 void SDB_GetList (uint8 * count, uint32 * list, student DB[]){
 	*count = SDB_GetUsedSize(DB);
-	for(int i = 0; i < (*count); i++)
-	{
-		list[i] = DB[i].Student_ID;
-	}
-
+	int index = 0;
+		for(int i = 0; i < 10; i++)
+		{
+			if((DB[i].Student_ID) != 0 || (DB[i].Student_year) != 0)
+				list[index] = DB[i].Student_ID;
+				index++;
+		}
 }
 
 bool SDB_IsIdExist(uint32 id, student DB[]){
